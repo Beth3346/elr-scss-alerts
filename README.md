@@ -18,6 +18,32 @@ Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't 
 npm install elr-scss-alerts --save
 ```
 
+##  Usage
+
+    .alert {
+        @include elr-alert;
+    }
+
+    .alert-info {
+        @include elr-alert-context($config: (type: info));
+    }
+
+    .alert-danger {
+        @include elr-alert-context($config: (type: danger));
+    }
+
+    .alert-warning {
+        @include elr-alert-context($config: (type: warning));
+    }
+
+    .alert-success {
+        @include elr-alert-context($config: (type: success));
+    }
+
+    .alert-muted {
+        @include elr-alert-context($config: (type: muted));
+    }
+
 ## License
 
 SEE LICENSE IN LICENSE.md
