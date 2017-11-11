@@ -1,0 +1,25 @@
+@import 'src/main';
+
+.alert {
+    @include elr-alert;
+}
+
+.alert-info {
+    @include elr-alert-context($config: (type: info));
+}
+
+.alert-danger {
+    @include elr-alert-context($config: (type: danger));
+}
+
+.alert-warning {
+    @include elr-alert-context($config: (type: warning));
+}
+
+.alert-success {
+    @include elr-alert-context($config: (type: success));
+}
+
+.alert-muted {
+    @include elr-alert-context($config: (type: muted));
+}
