@@ -14,7 +14,7 @@ Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't 
 npm install elr-scss-alerts --save
 ```
 
-##  Usage
+## Usage
 
     .alert {
         @include elr-alert;
