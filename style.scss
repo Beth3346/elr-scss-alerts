@@ -1,25 +1,34 @@
 @import 'src/main';
 
 .alert {
-    @include elr-alert;
+  @include elr-alert($config: (border-radius: 3px));
+  margin: 10px 0;
+  max-width: 768px;
 }
 
 .alert-info {
-    @include elr-alert-context($config: (type: info));
+  @include elr-alert-context($config: (type: info));
 }
 
 .alert-danger {
-    @include elr-alert-context($config: (type: danger));
+  @include elr-alert-context($config: (type: danger));
 }
 
 .alert-warning {
-    @include elr-alert-context($config: (type: warning));
+  @include elr-alert-context($config: (type: warning));
 }
 
 .alert-success {
-    @include elr-alert-context($config: (type: success));
+  @include elr-alert-context($config: (type: success));
 }
 
 .alert-muted {
-    @include elr-alert-context($config: (type: muted));
+  @include elr-alert-context($config: (type: muted));
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+  font-family: 'Lato', sans-serif;
 }

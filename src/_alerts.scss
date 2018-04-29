@@ -3,94 +3,99 @@
 // Use instead of overflow:hidden to clear floats
 
 @mixin elr-clearfix() {
-    &::after,
-    &::before {
-        content: '';
-        display: table;
-    }
+  &::after,
+  &::before {
+    content: '';
+    display: table;
+  }
 
-    &::after {
-        clear: both;
-    }
+  &::after {
+    clear: both;
+  }
 }
 
 @mixin elr-alert($config: ()) {
-    $config: extend((
-        border-radius: 0,
-        width: 100%,
-        color: #333,
-        text-color: #fff
-    ), $config);
+  $config:extend(
+    (border-radius: 0, width: 100%, color: #333, text-color: #fff),
+    $config
+  );
 
-    $border-radius: map-get($config, border-radius);
-    $width: map-get($config, width);
-    $color: map-get($config, color);
-    $text-color: map-get($config, text-color);
+  $border-radius: map-get($config, border-radius);
+  $width: map-get($config, width);
+  $color: map-get($config, color);
+  $text-color: map-get($config, text-color);
 
-    @include elr-clearfix;
-    padding: to-rems(10px) to-rems(20px);
-    max-width: $width;
-    position: relative;
+  @include elr-clearfix;
+  padding: to-rems(10px) to-rems(20px);
+  max-width: $width;
+  position: relative;
+  color: $text-color;
+  background-color: $color;
+  border: 1px solid $color;
+
+  @if $border-radius != 0 {
+    border-radius: $border-radius;
+  }
+
+  h2 {
+    padding: 0 0 5px;
+    margin: 0;
+    font-size: 18px;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .close {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    border: 0;
+    background: none;
+    transition: color, 0.3s;
     color: $text-color;
-    background-color: $color;
-    border: 1px solid $color;
 
-    @if $border-radius != 0 {
-        border-radius: $border-radius;
+    &:hover {
+      cursor: pointer;
     }
-
-    p {
-        padding: to-rems(10px) 0;
-    }
-
-    .close {
-        width: to-rems(20px);
-        height: to-rems(20px);
-        font-size: to-rems(14px);
-        padding: 0;
-        margin: 0;
-        position: absolute;
-        right: to-rems(5px);
-        top: to-rems(3px);
-        border: 0;
-        background: none;
-        transition: color, .3s;
-        color: $text-color;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
+  }
 }
 
 // TODO: map over alert types to avoid crazy if/else statements
 
 @mixin elr-alert-context($config: ()) {
-    $config: extend((
-        type: info
-    ), $config);
+  $config:extend((type: info), $config);
 
-    $type: map-get($config, type);
+  $type: map-get($config, type);
 
-    @if $type == info {
-        background-color: lighten(#1daaf0, 20%);
-        border-color: #1daaf0;
-        color: darken(#1daaf0, 15%);
-    } @else if $type == danger {
-        background-color: lighten(#f7322f, 20%);
-        border-color: #f7322f;
-        color: darken(#f7322f, 15%);
-    } @else if $type == warning {
-        background-color: lighten(#d1cb34, 20%);
-        border-color: #d1cb34;
-        color: darken(#d1cb34, 15%);
-    } @else if $type == success {
-        background-color: lighten(#7aba7b, 20%);
-        border-color: #7aba7b;
-        color: darken(#7aba7b, 15%);
-    } @else if $type == muted {
-        background-color: lighten(#999, 20%);
-        border-color: #999;
-        color: darken(#999, 15%);
-    }
+  @if $type == info {
+    background-color: lighten(#1daaf0, 20%);
+    border-color: #1daaf0;
+    color: darken(#1daaf0, 15%);
+  } @else if $type == danger {
+    background-color: lighten(#f7322f, 20%);
+    border-color: #f7322f;
+    color: darken(#f7322f, 15%);
+  } @else if $type == warning {
+    background-color: lighten(#d1cb34, 20%);
+    border-color: #d1cb34;
+    color: darken(#d1cb34, 15%);
+  } @else if $type == success {
+    background-color: lighten(#7aba7b, 20%);
+    border-color: #7aba7b;
+    color: darken(#7aba7b, 15%);
+  } @else if $type == muted {
+    background-color: lighten(#999, 20%);
+    border-color: #999;
+    color: darken(#999, 15%);
+  }
 }
