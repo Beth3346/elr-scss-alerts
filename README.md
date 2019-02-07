@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-alerts.svg?style=flat)]()
 
-a library of sass mixins
+scss mixin for alerts
 
 ## Installation
 
@@ -12,33 +12,56 @@ Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't 
 
 ```sh
 npm install elr-scss-alerts --save
+yarn add elr-scss-alerts
 ```
 
 ## Usage
 
-    .alert {
-        @include elr-alert;
-    }
+```scss
+.alert {
+  @include elr-alert;
+}
 
-    .alert-info {
-        @include elr-alert-context($config: (type: info));
-    }
+.alert-info {
+  @include elr-alert-context(
+    $config: (
+      type: info
+    )
+  );
+}
 
-    .alert-danger {
-        @include elr-alert-context($config: (type: danger));
-    }
+.alert-danger {
+  @include elr-alert-context(
+    $config: (
+      type: danger
+    )
+  );
+}
 
-    .alert-warning {
-        @include elr-alert-context($config: (type: warning));
-    }
+.alert-warning {
+  @include elr-alert-context(
+    $config: (
+      type: warning
+    )
+  );
+}
 
-    .alert-success {
-        @include elr-alert-context($config: (type: success));
-    }
+.alert-success {
+  @include elr-alert-context(
+    $config: (
+      type: success
+    )
+  );
+}
 
-    .alert-muted {
-        @include elr-alert-context($config: (type: muted));
-    }
+.alert-muted {
+  @include elr-alert-context(
+    $config: (
+      type: muted
+    )
+  );
+}
+```
 
 ## License
 
