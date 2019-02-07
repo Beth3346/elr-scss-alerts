@@ -105,6 +105,7 @@
     $config
   );
 
+  $text-color: #fff;
   $type: map-get($config, type);
 
   @if $type == info {
