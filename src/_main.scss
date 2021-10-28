@@ -1,4 +1,4 @@
-@import 'node_modules/elr-scss-functions/main';
+@import "node_modules/elr-scss-functions/src/main";
 // Alert Classes
 // Modern clearfix
 // Use instead of overflow:hidden to clear floats
@@ -6,7 +6,7 @@
 @mixin elr-clearfix() {
   &::after,
   &::before {
-    content: '';
+    content: "";
     display: table;
   }
 
@@ -21,7 +21,7 @@
       border-radius: 0,
       width: 100%,
       color: #333,
-      text-color: #fff
+      text-color: #fff,
     ),
     $config
   );
@@ -100,7 +100,7 @@
 @mixin elr-alert-context($config: ()) {
   $config: extend(
     (
-      type: info
+      type: info,
     ),
     $config
   );
