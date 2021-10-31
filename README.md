@@ -1,6 +1,5 @@
 # elr-scss-alerts
 
-[![Build Status](https://travis-ci.org/Beth3346/elr-scss-alerts.svg?branch=master)](https://travis-ci.org/Beth3346/elr-scss-alerts)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm](https://img.shields.io/npm/dm/elr-scss-alerts.svg?style=flat)]()
 
@@ -25,7 +24,7 @@ yarn add elr-scss-alerts
 .alert-info {
   @include elr-alert-context(
     $config: (
-      type: info
+      type: info,
     )
   );
 }
@@ -33,7 +32,7 @@ yarn add elr-scss-alerts
 .alert-danger {
   @include elr-alert-context(
     $config: (
-      type: danger
+      type: danger,
     )
   );
 }
@@ -41,7 +40,7 @@ yarn add elr-scss-alerts
 .alert-warning {
   @include elr-alert-context(
     $config: (
-      type: warning
+      type: warning,
     )
   );
 }
@@ -49,7 +48,7 @@ yarn add elr-scss-alerts
 .alert-success {
   @include elr-alert-context(
     $config: (
-      type: success
+      type: success,
     )
   );
 }
@@ -57,7 +56,7 @@ yarn add elr-scss-alerts
 .alert-muted {
   @include elr-alert-context(
     $config: (
-      type: muted
+      type: muted,
     )
   );
 }
