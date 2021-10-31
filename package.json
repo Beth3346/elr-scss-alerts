@@ -13,7 +13,7 @@
     "test": "gulp clean && gulp && gulp clean",
     "update": "ncu",
     "update:install": "ncu -u && npm install",
-    "publish": "np"
+    "publish": "gulp && np"
   },
   "devDependencies": {
     "del": "^6.0.0",
