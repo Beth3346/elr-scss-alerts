@@ -1,27 +1,51 @@
-@import 'src/main';
+@import "src/main";
 
 .elr-alert {
-  @include elr-alert($config: (border-radius: 3px));
+  @include elr-alert(
+    $config: (
+      border-radius: 3px,
+    )
+  );
   margin: 10px 0;
-  max-width: 768px;
+  // max-width: 768px;
 }
 
 .elr-alert-info {
-  @include elr-alert-context($config: (type: info));
+  @include elr-alert-context(
+    $config: (
+      type: info,
+    )
+  );
 }
 
 .elr-alert-danger {
-  @include elr-alert-context($config: (type: danger));
+  @include elr-alert-context(
+    $config: (
+      type: danger,
+    )
+  );
 }
 
 .elr-alert-warning {
-  @include elr-alert-context($config: (type: warning));
+  @include elr-alert-context(
+    $config: (
+      type: warning,
+    )
+  );
 }
 
 .elr-alert-success {
-  @include elr-alert-context($config: (type: success));
+  @include elr-alert-context(
+    $config: (
+      type: success,
+    )
+  );
 }
 
 .elr-alert-muted {
-  @include elr-alert-context($config: (type: muted));
+  @include elr-alert-context(
+    $config: (
+      type: muted,
+    )
+  );
 }
