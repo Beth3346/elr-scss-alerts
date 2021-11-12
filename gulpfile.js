@@ -59,7 +59,7 @@ gulp.task("default", done => {
   copyImages();
   copyHtml();
   processStyles();
-  // processScripts();
+  processScripts();
   // console.log({ styles });
   done();
 });

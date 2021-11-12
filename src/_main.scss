@@ -19,8 +19,6 @@
   $background-color: map-get($config, background-color);
   $color: map-get($config, color);
 
-  padding: 10px 20px;
-  position: relative;
   color: $color;
   // background-color: $color;
   border: 1px solid $color;
@@ -30,16 +28,15 @@
   display: flex;
   align-items: center;
   position: relative;
-
-  @if $border-radius != 0 {
-    border-radius: $border-radius;
-  }
-
   opacity: 1;
   visibility: visible;
   max-height: 1000px;
   transition: opacity 0.3s, visibility 0.3s, max-height 0s ease 0.4s,
     padding 0s ease 0.4s, border 0s ease 0.4s;
+
+  @if $border-radius != 0 {
+    border-radius: $border-radius;
+  }
 
   &.hidden {
     opacity: 0;
