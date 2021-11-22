@@ -1,4 +1,5 @@
 @import "elr-scss-functions/src/main";
+@import "elr-scss-config/src/main";
 // Alert Classes
 // Modern clearfix
 // Use instead of overflow:hidden to clear floats
@@ -6,10 +7,10 @@
 @mixin elr-alert($config: ()) {
   $config: extend(
     (
-      border-radius: 3px,
+      border-radius: $border-radius,
       width: 100%,
-      background-color: #e2e2e2,
-      color: #111,
+      background-color: $lightest-gray,
+      color: $text-color,
     ),
     $config
   );
@@ -131,26 +132,8 @@
     $config
   );
 
-  $color: #fff;
+  $color: $white;
   $type: map-get($config, type);
-
-  $blue: #1976d2;
-  $lightest-blue: #dfecf9;
-  $dark-blue: #005ebd;
-
-  $danger-color: #af100d;
-  $danger-background-color: #fddbdb;
-
-  $warning-color: #ce900b;
-  $warning-background-color: #fff2da;
-
-  $success-color: #337234;
-  $success-background-color: #dcf3dc;
-
-  $info-color: #1daaf0;
-
-  $muted-color: #666;
-  $muted-background-color: #f2f2f2;
 
   @if $type == info {
     background-color: $lightest-blue;
