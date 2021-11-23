@@ -5,6 +5,10 @@
 
 scss mixin for alerts
 
+## Screenshots
+
+![screenshot](./src/screenshot.png)
+
 ## Installation
 
 Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't already.
@@ -14,12 +18,20 @@ npm install elr-scss-alerts --save
 yarn add elr-scss-alerts
 ```
 
-## Usage
+## Implementation
+
+### Scss
 
 ```scss
+@import "elr-scss-alerts";
+
 .alert {
   @include elr-alert;
 }
+```
+
+```scss
+@import "elr-scss-alerts";
 
 .alert-info {
   @include elr-alert-context(
@@ -28,6 +40,10 @@ yarn add elr-scss-alerts
     )
   );
 }
+```
+
+```scss
+@import "elr-scss-alerts";
 
 .alert-danger {
   @include elr-alert-context(
@@ -36,6 +52,10 @@ yarn add elr-scss-alerts
     )
   );
 }
+```
+
+```scss
+@import "elr-scss-alerts";
 
 .alert-warning {
   @include elr-alert-context(
@@ -44,6 +64,10 @@ yarn add elr-scss-alerts
     )
   );
 }
+```
+
+```scss
+@import "elr-scss-alerts";
 
 .alert-success {
   @include elr-alert-context(
@@ -52,6 +76,10 @@ yarn add elr-scss-alerts
     )
   );
 }
+```
+
+```scss
+@import "elr-scss-alerts";
 
 .alert-muted {
   @include elr-alert-context(
@@ -60,6 +88,29 @@ yarn add elr-scss-alerts
     )
   );
 }
+```
+
+### HTML
+
+```html
+<div class="elr-alert js-alert">
+  <button class="elr-button-close js-button-close">&times;</button>
+  <span class="elr-icon">
+    <i class="fa fa-info"></i>
+  </span>
+  <div>
+    <h3 class="elr-notification-heading">This Is a Heading</h3>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed aut
+      provident harum debitis consequuntur deserunt doloremque aperiam quae
+      quasi expedita.
+    </p>
+    <div class="elr-button-holder">
+      <a href="#">View Issue</a>
+      <button class="js-button-close">Dismiss</button>
+    </div>
+  </div>
+</div>
 ```
 
 ## License
