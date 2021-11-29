@@ -1,51 +1,46 @@
-@import "src/main";
+@import "elr-scss-config/src/main";
 @import "elr-scss-reset/src/main";
+@import "elr-scss-base/src/main";
+@import "src/main";
 
 @include elr-reset;
+@include elr-base;
 
 * {
   font-family: Roboto;
 }
 
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-  width: 100%;
+.wrapper {
+  max-width: $content-width;
+  margin: auto;
+  padding: ($base-fontsize * 1.5);
 }
 
-.wrapper {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
+.main-heading,
+.subheading {
+  border-bottom: $border;
+  padding-bottom: $base-fontsize * 0.5;
+  margin-bottom: $base-fontsize;
+  width: 100%;
 }
 
 .main-heading {
-  font-size: 36px;
+  font-size: $base-fontsize * 2;
   font-weight: 700;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-  width: 100%;
 }
 
 .subheading {
-  font-size: 16px;
-  color: #666;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-  width: 100%;
+  font-size: $base-fontsize * 1.5;
+  font-weight: 900;
+  color: $primary-color;
 }
 
 .demo-content {
   position: relative;
-  padding: 20px 0;
+  padding: ($base-fontsize * 1.5) 0;
 }
 
-.elr-alert {
+.alert {
   @include elr-alert(
     $config: (
       border-radius: 3px,
@@ -55,7 +50,7 @@ hr {
   // max-width: 768px;
 }
 
-.elr-alert-info {
+.alert-info {
   @include elr-alert-context(
     $config: (
       type: info,
@@ -63,7 +58,7 @@ hr {
   );
 }
 
-.elr-alert-danger {
+.alert-danger {
   @include elr-alert-context(
     $config: (
       type: danger,
@@ -71,7 +66,7 @@ hr {
   );
 }
 
-.elr-alert-warning {
+.alert-warning {
   @include elr-alert-context(
     $config: (
       type: warning,
@@ -79,7 +74,7 @@ hr {
   );
 }
 
-.elr-alert-success {
+.alert-success {
   @include elr-alert-context(
     $config: (
       type: success,
@@ -87,7 +82,7 @@ hr {
   );
 }
 
-.elr-alert-muted {
+.alert-muted {
   @include elr-alert-context(
     $config: (
       type: muted,

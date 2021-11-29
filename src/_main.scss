@@ -25,7 +25,7 @@
   border: 1px solid $color;
   width: 100%;
   border-radius: $border-radius;
-  padding: 16px 24px;
+  padding: $base-fontsize 24px;
   display: flex;
   align-items: center;
   position: relative;
@@ -55,13 +55,14 @@
     cursor: pointer;
   }
 
-  .elr-notification-heading,
+  .notification-heading,
   p {
     padding: 0;
     margin: 0 0 4px;
+    color: $color;
   }
 
-  .elr-notification-heading {
+  .notification-heading {
     font-weight: 700;
     font-size: 24px;
 
@@ -71,7 +72,7 @@
   }
 
   p {
-    font-size: 16px;
+    font-size: $base-fontsize;
     max-width: 768px;
 
     &:first-child:last-child {
@@ -79,14 +80,14 @@
     }
   }
 
-  .elr-icon {
+  .icon {
     display: flex;
     align-items: center;
     justify-content: center;
     align-self: flex-start;
     // display: block;
     margin-right: 18px;
-    font-size: 16px;
+    font-size: $base-fontsize;
     color: #fff;
     flex-basis: 40px;
     min-width: 40px;
@@ -95,7 +96,7 @@
     border-radius: 20px;
   }
 
-  .elr-button-close {
+  .button-close {
     position: absolute;
     top: 4px;
     right: 4px;
@@ -104,16 +105,17 @@
     padding: 0 8px;
   }
 
-  .elr-button-holder {
+  .button-holder {
     display: flex;
     padding-top: 8px;
 
     button,
     a {
       font-size: 14px;
-      padding: 0 16px 0 0;
+      padding: 0 $base-fontsize 0 0;
       text-decoration: underline;
       font-weight: 700;
+      color: $color;
 
       &:hover {
         text-decoration: none;
@@ -159,12 +161,16 @@
 
   color: $color;
 
-  .elr-icon {
+  .icon {
     background-color: $color;
   }
 
-  h2,
-  p {
+  .notification-heading,
+  p,
+  a,
+  button,
+  .button-holder a,
+  .button-holder button {
     color: $color;
   }
 }
